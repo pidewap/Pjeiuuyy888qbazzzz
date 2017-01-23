@@ -11,7 +11,7 @@ return round($size,$round).$sizes[$i];
 
 $default_mp3_directory =  "./download/";
 $quot_arr = array(
-'http://utub.yn.lt/satriamusic4.png','http://utub.yn.lt/satriamusic4.png','http://utub.yn.lt/satriamusic4.png');
+'satriamusic1.png','satriamusic2.png','satriamusic3.png','satriamusic4.png','satriamusic5.png','satriamusic6.png','satriamusic7.png','satriamusic8.png');
 
 $quot_rand = array_rand($quot_arr);
 if(isset($_POST['submit'])){
