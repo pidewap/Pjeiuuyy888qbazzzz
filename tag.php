@@ -86,7 +86,7 @@ $gg=@implode($f);
 $pagelink=maling($gg, '<ol class="uldownload">', '</ol>');
 $linkdir=maling($gg, 'http://mp3download.planetlagu.site/save/', '.mp3');
 
-$ggg=explode('http://mp3download.planetlagu.site/sav', $gg);
+$ggg=explode('mp3download.planetlagu.site', $gg);
 
 if(!empty($_GET['url'])){
 $url=$_GET['url'];
@@ -96,8 +96,9 @@ $url=''.$linkdir.'';
 
 if(empty($pagelink)){
 
-$a=getfileinfo('http://mp3download.planetlagu.site/save/'.str_replace(' ', '%20', $url).'.mp3');
-
+//$a=getfileinfo('http://mp3download.planetlagu.site/save/'.str_replace(' ', '%20', $url).'.mp3');
+$a=getfileinfo('http://mp3download.planetlagu.site/save/04%20Lovelyz%20Emotion.mp3');
+ 
 echo '<style>.input {width:80%;}</style><center><form method="post" action="/muviza.php" enctype="multipart/form-data">URL:<br>
 <input type="text" class="input" name="mp3_filepath" value="http://mp3download.planetlagu.site/save/'.str_replace(' ', '%20', $url).'.mp3" /><br>
 <input type="hidden" class="input" name="mp3_filename" value="'.htmlspecialchars(str_replace(' - PlanetLagu.com', '', $a[tags][id3v2][artist]['0'])).' - '.htmlspecialchars($a[tags][id3v2][title]['0']).'.mp3" />Judul Lagu:<br>
@@ -110,7 +111,7 @@ echo '<style>.input {width:80%;}</style><center><form method="post" action="/muv
 <input type="submit" name="submit" value=" Download Music "/></form></center>';
 } else {
 for($i=1;$i<=500;$i++){
-$eurl=maling($ggg[$i], 'e/', '.mp3');
+$eurl=maling($ggg[$i], '/save/', '.mp3');
 if(!empty($eurl)){
 echo ''.$i.' <a href="?url='.$eurl.'">'.$eurl.'</a><br/>';
 }
