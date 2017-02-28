@@ -106,7 +106,7 @@ echo'</pre>';
 if(!empty($a[tags][id3v2][title]['0'])){
  echo '<style>.input {width:80%;}</style><center><form method="post" action="/muviza.php" enctype="multipart/form-data">URL:<br>
 <input type="text" class="input" name="mp3_filepath" value="http://mp3download.planetlagu.site/save/'.str_replace(' ', '%20', $url).'.mp3" /><br>
-<input type="hidden" class="input" name="mp3_filename" value="'.htmlspecialchars(str_replace(' ', '_', str_replace(' - PlanetLagu.com', '', $a[tags][id3v2][artist]['0']))).'_-_'.htmlspecialchars(str_replace(' ', '_', $a[tags][id3v2][title]['0'])).'.mp3" />Judul Lagu:<br>
+<input type="hidden" class="input" name="mp3_filename" value="'.htmlspecialchars(str_replace(' ', '_', str_replace(' - PlanetLagu.com', '', $a[tags][id3v2][artist]['0']))).'_-_'.htmlspecialchars(str_replace(' ', '_', $a[tags][id3v2][title]['0'])).'_'.htmlspecialchars(str_replace('designaeon_', '', str_replace('.mp3', '', $a[filename]))).'.mp3" />Judul Lagu:<br>
 <input type="text" class="input" name="mp3_songname" value="'.htmlspecialchars($a[tags][id3v2][title]['0']).'" />
 <input type="hidden" class="input" name="mp3_comment" value="Download from SatriaMusic.com" /><br>Artist:<br>
 <input type="text" class="input" name="mp3_artist" value="'.htmlspecialchars(str_replace('PlanetLagu', 'SatriaMusic', $a[tags][id3v2][artist]['0'])).'" /><br>
@@ -117,7 +117,7 @@ if(!empty($a[tags][id3v2][title]['0'])){
 }else{
  echo '<style>.input {width:80%;}</style><center><form method="post" action="/muviza.php" enctype="multipart/form-data">URL:<br>
 <input type="text" class="input" name="mp3_filepath" value="http://mp3download.planetlagu.site/save/'.str_replace(' ', '%20', $url).'.mp3" /><br>
-<input type="hidden" class="input" name="mp3_filename" value="'.htmlspecialchars(str_replace(' ', '_', str_replace(' - PlanetLagu.com', '', $a[tags][id3v1][artist]['0']))).'_-_'.htmlspecialchars(str_replace(' ', '_', $a[tags][id3v1][title]['0'])).'.mp3" />Judul Lagu:<br>
+<input type="hidden" class="input" name="mp3_filename" value="'.htmlspecialchars(str_replace(' ', '_', str_replace(' - PlanetLagu.com', '', $a[tags][id3v1][artist]['0']))).'_-_'.htmlspecialchars(str_replace(' ', '_', $a[tags][id3v1][title]['0'])).'_'.htmlspecialchars(str_replace('designaeon_', '', str_replace('.mp3', '', $a[filename]))).'.mp3" />Judul Lagu:<br>
 <input type="text" class="input" name="mp3_songname" value="'.htmlspecialchars($a[tags][id3v1][title]['0']).'" />
 <input type="hidden" class="input" name="mp3_comment" value="Download from SatriaMusic.com" /><br>Artist:<br>
 <input type="text" class="input" name="mp3_artist" value="'.htmlspecialchars(str_replace('PlanetLagu', 'SatriaMusic', $a[tags][id3v1][artist]['0'])).'" /><br>
