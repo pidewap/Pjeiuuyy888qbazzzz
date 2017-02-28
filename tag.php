@@ -86,7 +86,7 @@ $gg=@implode($f);
 $pagelink=maling($gg, '<ol class="uldownload">', '</ol>');
 $linkdir=maling($gg, 'http://mp3download.planetlagu.site/save/', '.mp3');
 
-$ggg=explode('mp3download.planetlagu.site', $gg);
+$ggg=explode('http://mp3download.planetlagu.site/sav', $gg);
 
 if(!empty($_GET['url'])){
 $url=$_GET['url'];
@@ -110,7 +110,7 @@ echo '<style>.input {width:80%;}</style><center><form method="post" action="/muv
 <input type="submit" name="submit" value=" Download Music "/></form></center>';
 } else {
 for($i=1;$i<=500;$i++){
-$eurl=maling($ggg[$i], 'save/', '.mp3');
+$eurl=maling($ggg[$i], 'e/', '.mp3');
 if(!empty($eurl)){
 echo ''.$i.' <a href="?url='.$eurl.'">'.$eurl.'</a><br/>';
 }
