@@ -84,9 +84,9 @@ ini_set('user_agent',$uarand."\r\naccept: text/html, application/xml;q=0.9, appl
 $f=file('http://www.planetlagu.site/'.$_GET['id'].'/');
 $gg=@implode($f);
 $pagelink=maling($gg, '<ol class="uldownload">', '</ol>');
-$linkdir=maling($gg, 'http://redirect.planetlagu.site/music-download?link=', '.mp3');
+$linkdir=maling($gg, 'http://mp3download.planetlagu.site', '.mp3');
 
-$ggg=explode('redirect.planetlagu.site', $gg);
+$ggg=explode('mp3download.planetlagu.site', $gg);
 
 if(!empty($_GET['url'])){
 $url=$_GET['url'];
