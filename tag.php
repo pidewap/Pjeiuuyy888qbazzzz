@@ -86,7 +86,7 @@ $gg=@implode($f);
 $pagelink=maling($gg, '<ol class="uldownload">', '</ol>');
 $linkdir=maling($gg, 'http://planetlagu.download/links?sub=mp3download&id=', '.mp3');
 $lname=maling($gg, 'Download lagu <strong>', '</strong>');
-$ggg=explode('http://planetlagu.download/links?sub=mp3download', $pagelink);
+$ggg=explode('<li>', $pagelink);
 
 if(!empty($_GET['url'])){
 $url=$_GET['url'];
@@ -134,8 +134,8 @@ if(!empty($a[tags][id3v2][title]['0'])){
 }
 }} else {
 for($i=1;$i<=500;$i++){
-$eurl=maling($ggg[$i], '&id=', '.mp3');
-$ename=maling($ggg[$i], '<li><strong>', ' MP3');
+$eurl=maling($ggg[$i], 'http://planetlagu.download/links?sub=mp3download&id=', '.mp3');
+$ename=maling($ggg[$i], '<strong>', ' MP3</strong>');
 if(!empty($eurl)){
 echo ''.$i.' <a href="?url='.$eurl.'&name='.$ename.'">'.$eurl.'</a><br/>';
 }
