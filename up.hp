@@ -67,22 +67,16 @@ input {display: block!important;width:70%;max-width:100%;}
 </style>
 </head>
 <body>
-<center><form method="post" action="http://cdn1.cloud.mp3tag.us/import.php?m=api&submit=from_edit_tag">URL File: <br />
-<input type="text" name="mp3_filepath" value="http://m03.wapka-file.com/music/'.$link.'" class="form-control" style="widht:100%"/> 
-<br /> Nama File: <br />
-<input type="text" class="form-control" value="'.htmlspecialchars($titles).' - SatriaMusic.com" name="mp3_filename" style="widht:100%"/>
-<input type="hidden" class="form-control" value="http://utub.yn.lt/satriamusic'.$rando.'.png" name="img1" style="widht:100%"/>
-<input type="hidden" class="form-control" value="SatriaMusic.com" name="mp3_comment" style="widht:100%"/>
-</div><div class="form-grup col-sm-5">
-<br /> Artis: <br />
-<input type="text" class="form-control" value="'.$artiss.' - Satriamusic.com" name="mp3_artist" style="widht:100%"/>
-<input type="hidden" class="form-control" value="SatriaMusic.com" name="mp3_album" style="widht:100%"/>
-<input type="hidden" class="form-control" value="'.$tahunn.'" name="mp3_year" style="widht:100%"/>
-<input type="hidden" class="form-control" value="SatriaMusic.com" name="mp3_genre" style="widht:100%"/> 
-</div> </div>
-<br /> <br />
-<input type="submit" value="Submit" class="btn btn-success px7" style="widht:100%" />
-</form>
+<center><form method="post" action="/muviza.php" enctype="multipart/form-data">URL:<br>
+<input type="text" class="input" name="mp3_filepath" value="http://m03.wapka-file.com/music/'.$link.'" /><br>
+<input type="hidden" class="input" name="mp3_filename" value="'.str_replace(' ', '_', $artiss).'_-_'.str_replace(' ', '_', htmlspecialchars($titles)).'.mp3" />Judul Lagu:<br>
+<input type="text" class="input" name="mp3_songname" value="'.htmlspecialchars($titles).'" />
+<input type="hidden" class="input" name="mp3_comment" value="Download from SatriaMusic.com" /><br>Artist:<br>
+<input type="text" class="input" name="mp3_artist" value="'.$artiss.' - SatriaMusic.com" /><br>
+<input type="hidden" class="input" name="mp3_album" value="SatriaMusic.com" />
+<input type="hidden" class="input" name="mp3_year" value="'.$tahunn.'" />
+<input type="hidden" class="input" name="mp3_genre" value="SatriaMusic.com" /><br>
+<input type="submit" name="submit" value=" Download Music "/></form>
 </center>
 </body>
 </html>';
